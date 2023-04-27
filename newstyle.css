@@ -112,11 +112,17 @@
 .smallImg {
     width: 100%;
 }
-@media (max-width: 400px) {
+@media (max-width: 500px) {
     .main-body {
         grid-template-columns: 1fr;
     }
     .item {
         height: 70vw;
+    }
+    .small-title {
+        font-size: 4vw;
+    }
+    .text {
+        font-size: 3vw;
     }
 }
