@@ -17,13 +17,25 @@
         <a href="aboutus.html#" class="nav link">About us</a>
         <a href="index.html#Contact" class="nav link">Contact</a>
     </div>
-    <div class="navbar">
-        <h1 class="nav title">Products</h1>
+    <div class="navbar mobile" id="mobile-nav">
+        <img src="lines.png" alt="menuX" class="menuImg img" onclick="mobileNavHide()">
         <div class="nav container">
             <a href="index.html#" class="nav link">HOME</a>
             <a href="products.html#" class="nav link">Products</a>
             <a href="aboutus.html#" class="nav link">About us</a>
             <a href="index.html#Contact" class="nav link">Contact</a>
+        </div>
+    </div>
+    <div class="navbar main-nav" id="main-nav">
+        <h1 class="nav title">Products</h1>
+        <div class="nav container main-cont">
+            <a href="index.html#" class="nav link">HOME</a>
+            <a href="products.html#" class="nav link">Products</a>
+            <a href="aboutus.html#" class="nav link">About us</a>
+            <a href="index.html#Contact" class="nav link">Contact</a>
+        </div>
+        <div class="menu-button" onclick="mobileNavShow()">
+            <img src="lines.png" alt="menu" class="menuImg">
         </div>
     </div>
     <div class="main-body">
