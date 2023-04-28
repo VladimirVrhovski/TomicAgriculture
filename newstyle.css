@@ -3,6 +3,9 @@
     --shadow-color: rgb(0, 190, 190);
     --darker: rgb(0, 150, 150)
 }
+body {
+    overflow-x: hidden;
+}
 .navbar {
     position: absolute;
     top: 1vw;
@@ -17,6 +20,9 @@
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
+}
+.main-nav {
+    transition-delay: 0.3s;
 }
 .onscroll {
     z-index: 2;
@@ -112,6 +118,37 @@
 .smallImg {
     width: 100%;
 }
+.mobile {
+    z-index: 3;
+    overflow: hidden;
+    position: absolute;
+    right: -100vw;
+    transition: right 0.3s;
+}
+.menu-button {
+    z-index: -2;
+    width: 0;
+    visibility: hidden;
+}
+.menuImg {
+    height: 4vw;
+    width: 4vw;
+}
+.img {
+    box-shadow: 0 0 0;
+    height: 90%;
+    display: block;
+    text-decoration: none;
+    color: var(--text-color);
+    border-radius: 1vw;
+    border: 1px solid white;
+    padding: 1%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+.menuImg:hover {
+    cursor: pointer;
+}
 @media (max-width: 500px) {
     .main-body {
         grid-template-columns: 1fr;
@@ -124,5 +161,20 @@
     }
     .text {
         font-size: 3vw;
+    }
+    .main-cont {
+        width: 0;
+        visibility: hidden;
+    }
+    .menu-button {
+        z-index: 1;
+        width: auto;
+        visibility: visible;
+    }
+    .title {
+        font-size: 5vw;
+    }
+    .nav .link {
+        font-size: 4vw;
     }
 }
