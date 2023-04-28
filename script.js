@@ -7,3 +7,13 @@ function NavBarScroll() {
         document.getElementById("scroll-nav").style.top = "-" + document.getElementById("scroll-nav").offsetHeight + "px";
     }
 }
+function mobileNavShow() {
+    document.getElementById("main-nav").style.transitionDelay="0s";
+    document.getElementById("main-nav").style.visibility="hidden";
+    document.getElementById("mobile-nav").style.right="0";
+}
+function mobileNavHide() {
+    document.getElementById("main-nav").style.transitionDelay="0.3s";
+    document.getElementById("main-nav").style.visibility="visible";
+    document.getElementById("mobile-nav").style.right="-100vw";
+}
