@@ -22,7 +22,7 @@ body {
     align-items: center;
 }
 .main-nav {
-    transition-delay: 0.3s;
+    transition-delay: 0s;
 }
 .onscroll {
     z-index: 2;
@@ -121,8 +121,8 @@ body {
 .mobile {
     z-index: 3;
     overflow: hidden;
-    position: absolute;
-    right: -100vw;
+    right: 0;
+    visibility: hidden;
     transition: right 0.3s;
 }
 .menu-button {
@@ -172,9 +172,13 @@ body {
         visibility: visible;
     }
     .title {
-        font-size: 5vw;
+        font-size: 4.5vw;
     }
-    .nav .link {
+    .link {
         font-size: 4vw;
     }
 }
+
+/*.test {
+    visibility: hidden;
+}*/
