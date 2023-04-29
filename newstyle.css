@@ -121,9 +121,7 @@ body {
 .mobile {
     z-index: 3;
     overflow: hidden;
-    right: 0;
     visibility: hidden;
-    transition: right 0.3s;
 }
 .menu-button {
     z-index: -2;
