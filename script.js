@@ -8,12 +8,11 @@ function NavBarScroll() {
     }
 }
 function mobileNavShow() {
-    document.getElementById("main-nav").style.transitionDelay="0s";
     document.getElementById("main-nav").style.visibility="hidden";
-    document.getElementById("mobile-nav").style.right="0";
+    document.getElementById("mobile-nav").style.visibility="visible";
+    
 }
 function mobileNavHide() {
-    document.getElementById("main-nav").style.transitionDelay="0.3s";
     document.getElementById("main-nav").style.visibility="visible";
-    document.getElementById("mobile-nav").style.right="-100vw";
+    document.getElementById("mobile-nav").style.visibility="hidden";
 }
