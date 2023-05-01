@@ -1,0 +1,233 @@
+:root {
+    --text-color: rgb(0, 205, 205);
+    --shadow-color: rgb(0, 190, 190);
+    --darker: rgb(0, 150, 150)
+}
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+body {
+    position: relative;
+}
+.navbar {
+    position: absolute;
+    top: 1vw;
+    background-color: white;
+    padding-left: 3%;
+    padding-right: 3%;
+    box-shadow: 5px 10px 14px black;
+    border-radius: 10px;
+    width: 90vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    -webkit-transition-delay: .3s;
+    -o-transition-delay: .3s;
+    transition-delay: .3s;
+    -webkit-transition: .4s;
+    -o-transition: .4s;
+    transition: .4s;
+}
+.main-away {
+    transform: translateX(0);
+}
+.onscroll {
+    z-index: 2;
+    justify-content: flex-end;
+    border-radius: 0;
+    box-shadow: 0 0;
+    background-color: var(--shadow-color);
+    width: 100vw;
+    position: fixed;
+    top: -10vw;
+    right: 0;
+    transition: top 0.3s;
+}
+.onscroll .link {
+    background-color: var(--shadow-color);
+    color: white;
+    border: 1px solid var(--shadow-color);
+    box-shadow: 0 0;
+    border-radius: 0;
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+.onscroll .link:hover {
+    background-color: var(--darker);
+    border-radius: 0;
+    box-shadow: 0 0;
+}
+.container {
+    display: flex;
+    flex-grow: 1;
+    justify-content: flex-end;
+    gap: 10px;
+}
+.title {
+    font-size: 3vw;
+    color: var(--text-color);
+}
+.link {
+    font-weight: bold;
+    background-color: white;
+    height: 90%;
+    display: block;
+    text-decoration: none;
+    color: var(--text-color);
+    border-radius: 1vw;
+    border: 1px solid white;
+    box-shadow: 5px 5px 5px white;
+    font-size: 2vw;
+    padding: 1%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+.link:hover {
+    border-radius: 1vw;
+    border: 1px solid var(--text-color);
+    box-shadow: 5px 5px 5px var(--shadow-color);
+}
+.bgImg {
+    z-index: -1;
+    position: fixed;
+    top: 4vw;
+    left: 0;
+    width: 100vw;
+}
+.main-body {
+    border-radius: 3vw;
+    padding: 1vw;
+    width: 70vw;
+    margin: auto;
+    background-color: white;
+    position: relative;
+    top: 20vw;
+    box-shadow: 5px 10px 14px var(--shadow-color);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.item {
+    height: 33vw;
+    padding: 1vw;
+    border-radius: 3vw;
+}
+.small-title {
+    font-size: 2vw;
+    color: var(--text-color);
+}
+.text {
+    font-size: 1.5vw;
+}
+.more {
+    text-decoration: none;
+    color: gray;
+}
+.more:hover {
+    text-decoration: underline;
+}
+.smallImg {
+    width: 100%;
+    -webkit-transform: translateY(10px);
+    -o-transform: translateY(10px);
+    transform: translateY(10px);
+    -webkit-transition-delay: .3s;
+    -o-transition-delay: .3s;
+    transition-delay: .3s;
+    -webkit-transition: .4s;
+    -o-transition: .4s;
+    transition: .4s;
+    opacity: 0;
+}
+.inView {
+    opacity: 1;
+    -webkit-transform: translateY(0px) rotate(0deg) translateZ(0);
+    transform: translateY(0px) rotate(0deg) translateZ(0);
+}
+.mobile-away {
+    transform: translateX(100vw);
+}
+.mobile {
+    z-index: 3;
+    overflow: hidden;
+    /* visibility: hidden; */
+}
+.menu-button {
+    z-index: -2;
+    width: 0;
+    visibility: hidden;
+}
+.menuImg {
+    height: 4vw;
+    width: 4vw;
+}
+.img {
+    box-shadow: 0 0 0;
+    height: 90%;
+    display: block;
+    text-decoration: none;
+    color: var(--text-color);
+    border-radius: 1vw;
+    border: 1px solid white;
+    padding: 1%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+.menuImg:hover {
+    cursor: pointer;
+}
+@media (max-width: 500px) {
+    .main-body {
+        grid-template-columns: 1fr;
+    }
+    .item {
+        height: 70vw;
+    }
+    .item-1 {
+        order: 1;
+    }
+    .item-2 {
+        order: 2;
+    }
+    .item-4 {
+        order: 3;
+    }
+    .item-3 {
+        order: 4;
+    }
+    .item-5 {
+        order: 5;
+    }
+    .item-6 {
+        order: 6;
+    }
+    .small-title {
+        font-size: 4vw;
+    }
+    .text {
+        font-size: 3vw;
+    }
+    .main-cont {
+        width: 0;
+        visibility: hidden;
+    }
+    .menu-button {
+        z-index: 1;
+        width: auto;
+        visibility: visible;
+    }
+    .title {
+        font-size: 4.5vw;
+    }
+    .link {
+        font-size: 4vw;
+    }
+    .main-away {
+        transform: translateX(-100vw);
+    }
+}
+
+/*.test {
+    visibility: hidden;
+}*/
